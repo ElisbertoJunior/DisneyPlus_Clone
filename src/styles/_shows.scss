@@ -1,0 +1,45 @@
+@use 'variables';
+
+.shows{
+  padding: 2vw 5.6vw;
+
+  &__list {
+    display: none;
+    margin-top: 44px;
+    gap: 24px;
+    grid-template-columns: 1fr 1fr 1fr; 
+
+    &--is-active {
+      display: grid;
+    }
+
+    &__item {
+      img {
+        max-width: 100%;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+     &__button {
+      color: variables.$secondaryTextColor;
+      font-size: 20px;
+      text-transform: uppercase;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding-bottom: 5px;
+      border-bottom: 5px solid transparent;
+
+      &--is-active {
+        border-color: variables.$secondaryTextColor;
+      }
+
+     }
+  }
+}
