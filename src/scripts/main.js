@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll("[data-tab-button]");
+  const questions = document.querySelectorAll('[data-faq-question]');
 
   buttons.forEach((button) => {
     button.addEventListener("click", (btn) => {
@@ -11,6 +12,16 @@ document.addEventListener("DOMContentLoaded", () => {
       showSelectedButton(btn);
     });
   });
+
+  questions.forEach(question => {
+    question.addEventListener('click', (element) => {
+      const classActive = 'faq__questions__item--is-open';
+      const elementoPai = element.target.parentNode;
+
+      elementoPai.classList.toggle(classActive);
+    })
+  })
+
 });
 
 const showActiveList = tab => tab.classList.add("shows__list--is-active");
