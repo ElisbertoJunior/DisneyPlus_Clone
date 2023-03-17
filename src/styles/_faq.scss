@@ -36,7 +36,7 @@
         height: 0;
         overflow: hidden;
         padding: 0 24px;
-        transition: height, .5s ease;
+        transition: height, .9s ease;
       }
 
       &--is-open {
@@ -49,7 +49,15 @@
           
           padding-bottom: 24px;
           height: auto;
-          transition: height, .5s ease;
+          transition: height, .9s ease;
+
+          ul {
+            margin-left: 50px;
+
+            li {
+              line-height: 40px;
+            }
+          }
         }
       }
     }
