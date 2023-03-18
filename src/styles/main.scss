@@ -46,14 +46,26 @@ body {
 
 .text--big {
   @include text(18px);
+
+  @media screen and (max-width: 767px) {
+    @include text(15px);
+  }
 }
 
 .text { 
   @include text;
+
+  @media screen and (max-width: 767px) {
+    @include text(14px);
+  }
 }
 
 .text--small {
   @include text(12px);
+
+  @media screen and (max-width: 767px) {
+    @include text(11px);
+  }
 }
 
 .link-text {
@@ -64,14 +76,26 @@ body {
 
 .title--big {
   @include title(44px);
+
+  @media screen and (max-width: 767px) {
+    @include title(26px);
+  }
 }
 
 .title {
   @include title;
+
+  @media screen and (max-width: 767px) {
+    @include title(24px);
+  }
 }
 
 .title--small {
   @include title(28px);
+
+  @media screen and (max-width: 767px) {
+    @include title(22px);
+  }
 }
 
 .button {
@@ -124,6 +148,11 @@ body {
   grid-template-columns: 1fr 1fr;
   align-items: center;
 
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin-bottom: 50px;
+  }
+
   img {
     max-width: 100%;
   }
@@ -141,6 +170,7 @@ body {
     display: block;
     position: relative;
 
+
     img {
       width: 100%;
     }
@@ -154,6 +184,13 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center;
+
+      @media screen and (max-width: 767px) {
+        position: relative;
+        left: 0;
+        width: 100%;
+      }
+
     }
 
   }
