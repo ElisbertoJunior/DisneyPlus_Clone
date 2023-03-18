@@ -2,11 +2,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll('[data-tab-button]');
   const questions = document.querySelectorAll('[data-faq-question]');
 
-  buttons.forEach(activeList);
+  const heroSection = document.querySelector('.hero');
+  const heightHero = heroSection.clientHeight;
 
+  window.addEventListener('scroll', () => {
+    const currentPosition = window.scrollY
+    const header = document.querySelector('.header');
+
+    if(currentPosition < heightHero) {
+      header.classList.add('header--is-hidden');
+    } else {
+      header.classList.remove('header--is-hidden');
+    }
+  })
+
+  buttons.forEach(activeList);
   questions.forEach(showQuestion);
 
 });
+
 
 const activeList = button => {
   button.addEventListener("click", (btn) => {
